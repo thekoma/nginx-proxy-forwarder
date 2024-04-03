@@ -1,0 +1,12 @@
+version: "3"
+services:
+  jailbreaker:
+    image: nginx
+    container_name: jailbreaker
+    environment:
+      - TZ=Europe/Rome
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 443:443
+    restart: unless-stopped
